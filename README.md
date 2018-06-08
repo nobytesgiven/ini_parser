@@ -1,5 +1,5 @@
 # Lua .INI Parser
-[![Github file size](https://img.shields.io/github/size/webcaetano/craft/build/phaser-craft.min.js.svg?style=plastic)](https://github.com/FivosM/ini_parser)[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)](https://github.com/FivosM/ini_parser)
+[![Github file size](https://img.shields.io/badge/size-2.5%20kB-green.svg)](https://github.com/FivosM/ini_parser) &nbsp; [![license](https://img.shields.io/badge/license-CC0-green.svg)](https://github.com/FivosM/ini_parser/blob/master/LICENSE.md)
 ##### The library is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 Attribution is not required but always appreciated.
 
