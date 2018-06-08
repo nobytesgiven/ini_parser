@@ -4,7 +4,7 @@
 ###### Please note that the library only works with [LÖVE](https://love2d.org/)
 
 ## API
-`ini = require("ini")` Requires the library.
+`ini = require "ini"` Requires the library.
 
 ### Necessary API for using .ini files
 
