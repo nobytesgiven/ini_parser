@@ -1,8 +1,5 @@
 # Lua .INI Parser
 [![Github file size](https://img.shields.io/badge/size-2.5%20kB-green.svg)](https://github.com/FivosM/ini_parser) &nbsp; [![license](https://img.shields.io/badge/license-CC0-green.svg)](https://github.com/FivosM/ini_parser/blob/master/LICENSE.md)
-##### The library is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
-Attribution is not required but always appreciated.
-
 The library only works with [LÖVE](https://love2d.org/)
 
 ## API
