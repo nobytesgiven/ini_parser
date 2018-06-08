@@ -1,6 +1,6 @@
 --[[
-    AUTHOR: Fivos Moutavelis (https://github.com/FivosM)
-    LICENSE: CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+    AUTHOR: Fivos Moutavelis (https://github.com/FivosM).
+    LICENSE: CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/legalcode).
     Attribution is not required but always appreciated.
 ]]--
 
@@ -12,14 +12,17 @@ function ini.load( filePath )
         local iniTable = {}
         local currentSection = "default"
         for line in love.filesystem.lines( filePath ) do
-            local section = string.match( line, "%[%s*(.*)%s*%]" ) -- Returns section (if current line defines a new section)
-            if section ~= nil then
-                currentSection = section
-                iniTable[section] = {}
-            else
-                local variableName, variableValue = string.match( line, "(.*)%s*=%s*(.+[^%s])" ) -- Returns variable name and variable value
-                if variableName and variableValue then
-                    iniTable[currentSection][variableName] = variableValue
+            local isComment = string.match( line, "^%s*;.*$") -- Returns a string if the line is a comment
+            if line ~= "" and isComment == nil then 
+                local section = string.match( line, "%[%s*(.*)%s*%]" ) -- Returns section (if current line defines a new section)
+                if section ~= nil then
+                    currentSection = section
+                    iniTable[section] = {}
+                else
+                    local variableName, variableValue = string.match( line, "^%s*(.*[^%s])%s*=%s*(.+[^%s])%s*$" ) -- Returns variable name and variable value
+                    if variableName and variableValue then
+                        iniTable[currentSection][variableName] = variableValue
+                    end
                 end
             end
         end
