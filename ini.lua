@@ -46,7 +46,6 @@ function ini.save( iniTable, file )
     return nil
 end
 
-
 function ini.readKey( iniTable, sectionName, keyName )
     return iniTable[sectionName][keyName]
 end
@@ -86,3 +85,4 @@ function ini.deleteKey( iniTable, sectionName, keyName )
 end
 
 return ini
+
