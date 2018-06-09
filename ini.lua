@@ -36,7 +36,7 @@ function ini.save( iniTable, file )
         local writeString = ""
         for sectionName, sectionValue in pairs( iniTable ) do
             writeString = writeString .. "[" .. sectionName .. "]" .. "\r\n"
-            for variableName, variableValue in pairs(sectionValue) do
+            for variableName, variableValue in pairs( sectionValue ) do
                 writeString = writeString .. variableName .. " = " .. variableValue .. "\r\n"
             end
         end
