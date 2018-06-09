@@ -3,7 +3,7 @@
 ###### [INI file format specification](https://en.wikipedia.org/wiki/INI_file)
 ###### Please note that the library only works with [LÖVE](https://love2d.org/)
 
-## API
+## • API
 `ini = require "ini"` Requires the library.
 
 ### Necessary API for using .ini files
@@ -28,3 +28,36 @@ The below functions are not necessary and can be easily replaced with simple tab
 `ini.deleteSection( iniTable, sectionName )` Removes a section.
 
 `ini.deleteKey( iniTable, sectionName, keyName )` Removes a key.
+
+## • Example of API usage
+##### Load ini file to table and print one of its keys:
+```lua
+ini = require "ini" 
+ini_file = ini.load("file.ini") 
+if ini_file then 
+	print(ini.readKey( ini_file, "owner", "name" )) 
+end
+```
+##### Save table as an ini file:
+```lua
+ini = require "ini" 
+ini_table = {
+	scores = {
+		player1 = 3982,
+		player2 = 1312,
+		player3 = 13,
+		player4 = 1543,
+	},
+	playerNames = {
+		player1 = "Pete",
+		player2 = "Billy",
+		player3 = "Sam",
+		player4 = "Eric"
+	}
+}
+
+if ini.save(ini_table, "inifile.ini") then
+	print("success!")
+end
+
+```
