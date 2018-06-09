@@ -61,3 +61,4 @@ if ini.save(ini_table, "inifile.ini") then
 end
 
 ```
+![This code is licensed under CC0](https://licensebuttons.net/p/zero/1.0/88x31.png "This code is licensed under CC0") &nbsp;
