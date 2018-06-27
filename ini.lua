@@ -7,19 +7,22 @@
 local ini = {}
 
 function ini.load( filePath )
-    fileInfo = love.filesystem.getInfo( filePath )
+    local fileInfo = love.filesystem.getInfo( filePath )
     if fileInfo and fileInfo.type == "file" then
         local iniTable = {}
         local currentSection = "default"
         for line in love.filesystem.lines( filePath ) do
-            local isComment = string.match( line, "^%s*;.*$") -- Returns a string if the line is a comment
-            if line ~= "" and isComment == nil then 
-                local section = string.match( line, "%[%s*(.*)%s*%]" ) -- Returns section (if current line defines a new section)
+            -- Returns a string if the line is a comment
+            local isComment = string.match( line, "^%s*;.*$")
+            if line ~= "" and isComment == nil then
+                -- Get section name (if section)
+                local section = string.match( line, "%[%s*(.*)%s*%]" )
                 if section ~= nil then
                     currentSection = section
                     iniTable[section] = {}
                 else
-                    local variableName, variableValue = string.match( line, "^%s*(.*[^%s])%s*=%s*(.+[^%s])%s*$" ) -- Returns variable name and variable value
+                    -- Get variable name and value
+                    local variableName, variableValue = string.match( line, "^%s*(.*[^%s])%s*=%s*(.+[^%s])%s*$" )
                     if variableName and variableValue then
                         iniTable[currentSection][variableName] = variableValue
                     end
@@ -70,7 +73,7 @@ function ini.sectionExists( iniTable, sectionName )
     return 0
 end
 
-function ini.keyExists( iniTable, keyName )
+function ini.keyExists( iniTable, sectionName, keyName )
     if iniTable[sectionName][keyName] then
         return 1
     end
