@@ -61,4 +61,4 @@ if ini.save(ini_table, "inifile.ini") then
 end
 
 ```
-[![This library is licensed under CC0](https://licensebuttons.net/p/zero/1.0/88x31.png "This code is licensed under CC0")](https://github.com/FivosM/ini_parser/blob/master/LICENSE.md)
+[![This library is licensed under CC0](https://licensebuttons.net/p/zero/1.0/88x31.png "This code is licensed under CC0")](https://raw.githubusercontent.com/FivosM/ini_parser/master/LICENSE)
