@@ -1,4 +1,4 @@
-# Lua .INI Parser
+# LOVE2D Lua .INI Parser
 [![Github file size](https://img.shields.io/badge/size-2.72%20kB-green.svg)](https://github.com/FivosM/ini_parser/blob/master/ini.lua) &nbsp; [![license](https://img.shields.io/badge/license-CC0-green.svg)](https://github.com/FivosM/ini_parser/blob/master/LICENSE.md)
 ###### [INI file format specification](https://en.wikipedia.org/wiki/INI_file)
 ###### Please note that the library only works with [LÖVE](https://love2d.org/)
