@@ -17,17 +17,17 @@ The below functions are not necessary and can be easily replaced with simple tab
 
 `ini.readKey( iniTable, sectionName, keyName )` Returns a key value.
 
-`ini.addSection( iniTable, newSectionName )` Adds a new section.
+`ini.addSection( iniTable, newSectionName )` Adds a new section, always returns 1.
 
-`ini.addKey( iniTable, sectionName, keyName, keyValue )` Adds a value to a key.
+`ini.addKey( iniTable, sectionName, keyName, keyValue )` Adds a value to a key, always returns 1.
 
-`ini.sectionExists( iniTable, sectionName )` Checks if section exists.
+`ini.sectionExists( iniTable, sectionName )` Checks if section exists, returns 1 if it exists or 0 if it does not.
 
-`ini.keyExists( iniTable, keyName )` Checks if key exists.
+`ini.keyExists( iniTable, keyName )` Checks if key exists, returns 1 if it exists or 0 if it does not.
 
-`ini.deleteSection( iniTable, sectionName )` Removes a section.
+`ini.deleteSection( iniTable, sectionName )` Removes a section, always returns 1.
 
-`ini.deleteKey( iniTable, sectionName, keyName )` Removes a key.
+`ini.deleteKey( iniTable, sectionName, keyName )` Removes a key, always returns 1.
 
 ## • Example of API usage
 ##### Load ini file to table and print one of its keys:
