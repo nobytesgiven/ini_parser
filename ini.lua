@@ -22,7 +22,7 @@ function ini.load( filePath )
                     iniTable[section] = {}
                 else
                     -- Get variable name and value
-                    local variableName, variableValue = string.match( line, "^%s*(.*[^%s])%s*=%s*(.+[^%s])%s*$" )
+                    local variableName, variableValue = string.match( line, "^%s*(.*[^%s])%s*=%s*(.*[^%s])%s*$" )
                     if variableName and variableValue then
                         iniTable[currentSection][variableName] = variableValue
                     end
